@@ -1,0 +1,30 @@
+[{
+    "hiragana": "たべる",
+    "kanji": "食べる",
+    "meaning": "to eat",
+    "type": "ichidan"
+},
+{
+    "hiragana": "いく",
+    "kanji": "行く",
+    "meaning": "to go",
+    "type": "godan"
+},
+{
+    "hiragana": "する",
+    "kanji": "する",
+    "meaning": "to do",
+    "type": "irregular"
+},
+{
+    "hiragana": "くる",
+    "kanji": "来る",
+    "meaning": "to come",
+    "type": "irregular"
+},
+{
+    "hiragana": "あそぶ",
+    "kanji": "遊ぶ",
+    "meaning": "to play; to hang out",
+    "type": "godan"
+}]
