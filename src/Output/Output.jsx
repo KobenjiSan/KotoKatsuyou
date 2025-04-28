@@ -1,15 +1,22 @@
-import Form from '../Form/Form.jsx'
+import { 
+    DictionaryForm, 
+    PoliteForm, 
+    NegativeForm, 
+    TeForm, 
+    PastForm,
+} from '../Forms';
 import styles from './Output.module.css'
 
-function Output(){
+function Output(props){
 
     return(
         <div className={styles.output}>
-            <Form type="Dictionary" word="食べる" />
-            <Form type="Polite" word="食べます" />
-            <Form type="Negative" word="食べない" />
-            <Form type="Te-" word="食べて" />
-            <Form type="Past" word="食べた" />
+            <h1>Hello {props.word}</h1>
+            <DictionaryForm/>
+            <PoliteForm/>
+            <NegativeForm/>
+            <TeForm/>
+            <PastForm/>
         </div>
     );
 
