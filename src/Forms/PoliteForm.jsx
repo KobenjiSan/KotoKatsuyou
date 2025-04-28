@@ -1,9 +1,11 @@
+import styles from './Form.module.css'
+
 function PoliteForm(){
 
     const formName = "Polite";
 
     return(
-        <div>
+        <div className={styles.formBox}>
             <p>{formName}</p>
         </div>
     );

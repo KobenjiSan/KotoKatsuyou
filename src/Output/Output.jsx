@@ -11,12 +11,20 @@ function Output(props){
 
     return(
         <div className={styles.output}>
-            <h1>Hello {props.word}</h1>
+            <div className={styles.head}>
+                <h2>
+                    {props.verbData.kanji} 
+                    {props.verbData.hiragana} 
+                    {props.verbData.meaning} 
+                    {props.verbData.type}
+                </h2>
+            </div>
             <DictionaryForm/>
             <PoliteForm/>
             <NegativeForm/>
             <TeForm/>
             <PastForm/>
+            <div className={styles.foot}/>
         </div>
     );
 

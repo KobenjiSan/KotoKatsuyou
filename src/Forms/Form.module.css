@@ -1,0 +1,40 @@
+.formBox{
+    border-bottom: 2px solid;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+
+    .type{
+        margin: 0;
+        flex:1;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .word{
+        margin: 0;
+        font-size: 1.5rem;
+        text-justify: center;
+        font-weight: bold;
+    }
+
+    button{
+        border: none;
+        background: none;
+        font-weight: bolder;
+        font-size: xx-large;
+        align-self: top;
+        text-justify: center;
+        margin-left: 6px;
+        margin-top: 2px;
+    }
+    button:hover{
+        cursor: pointer;
+        color: #2f362c;
+    }
+}
+.infoBox{
+    background-color: white;
+    height: 125px;
+    border-bottom: 2px solid;
+}

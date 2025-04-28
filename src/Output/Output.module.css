@@ -1,3 +1,13 @@
 .output{
     background-color: #97A890;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+.head{
+    height: 25px;
+    border-bottom: 2px solid;
+}
+.foot{
+    height: 25px;
 }
