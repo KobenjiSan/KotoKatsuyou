@@ -17,7 +17,8 @@ function Input(props){
                 <input 
                     type="text" 
                     value={input}
-                    onChange={handleInputChange}    
+                    onChange={handleInputChange}
+                    placeholder="Enter verb (hiragana only)" 
                 />
                 <button onClick={() => props.callback(input)}>Conjugate</button>
             </div>
