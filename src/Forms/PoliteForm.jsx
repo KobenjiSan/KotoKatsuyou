@@ -32,7 +32,7 @@ function PoliteForm(props){
             return conjugatedWord + newEnding  + "ます"
         }else if(props.data.type === "irregular"){
             let lastCharacters = (props.data.hiragana).slice(-2);
-            const conjugatedWord = (props.data.hiragana).slice(0, -2); 
+            const conjugatedWord = (props.data.kanji).slice(0, -2); 
             if(lastCharacters === "する"){
                 return conjugatedWord + "します"
             }else if(lastCharacters === "くる"){

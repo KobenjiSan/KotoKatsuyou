@@ -4,7 +4,7 @@ function Header(){
 
     return(
         <div className={styles.head}>
-            <img src="./public/KotoKatsuyouLogo.png" alt="jjj" />
+            <img src="./KotoKatsuyouLogo.png" alt="jjj" />
         </div>
     );
 

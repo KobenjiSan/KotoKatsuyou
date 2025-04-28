@@ -20,7 +20,7 @@ function Output(props){
             </div>
             <DictionaryForm data={props.verbData}/>
             <PoliteForm data={props.verbData}/>
-            <NegativeForm/>
+            <NegativeForm data={props.verbData}/>
             <TeForm/>
             <PastForm/>
             <div className={styles.foot}/>
