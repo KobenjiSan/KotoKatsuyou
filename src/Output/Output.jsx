@@ -12,15 +12,14 @@ function Output(props){
     return(
         <div className={styles.output}>
             <div className={styles.head}>
-                <h2>
-                    {props.verbData.kanji} 
-                    {props.verbData.hiragana} 
-                    {props.verbData.meaning} 
-                    {props.verbData.type}
-                </h2>
+                <h2 className={styles.kanji}>{props.verbData.kanji}</h2>
+                <h2 className={styles.hiragana}>{props.verbData.hiragana}</h2>
+                <h2 className={styles.meaning}>{props.verbData.meaning ? (props.verbData.meaning).toUpperCase() : null}</h2> 
+                <h2 className={styles.type}>{props.verbData.type ? (props.verbData.type).toUpperCase() : null}</h2>
+                
             </div>
-            <DictionaryForm/>
-            <PoliteForm/>
+            <DictionaryForm data={props.verbData}/>
+            <PoliteForm data={props.verbData}/>
             <NegativeForm/>
             <TeForm/>
             <PastForm/>

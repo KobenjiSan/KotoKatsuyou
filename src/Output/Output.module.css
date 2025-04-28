@@ -5,8 +5,31 @@
     margin-top: 25px;
 }
 .head{
-    height: 25px;
+    height: 40px;
     border-bottom: 2px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+
+    .kanji{
+       font-size: 2rem; 
+    }
+
+    .hiragana{
+        flex:1;
+        font-weight:400;
+    }
+
+    .meaning{
+        flex:1.5;
+        font-size: 2rem;
+    }
+
+    .type{
+        flex-direction: column-reverse;
+    }
+
 }
 .foot{
     height: 25px;

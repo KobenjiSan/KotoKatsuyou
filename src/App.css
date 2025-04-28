@@ -1,3 +1,7 @@
+*{
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 .mainContent{
   /* background-color: aqua; */
   width: 600px;
