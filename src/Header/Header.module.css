@@ -1,0 +1,10 @@
+.head{
+    display: flex;
+    justify-content: end;
+
+    img{  
+        width: 55%;
+        margin-top: 5%;
+        padding: 0;
+    }
+}

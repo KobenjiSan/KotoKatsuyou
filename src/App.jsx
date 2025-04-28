@@ -1,4 +1,5 @@
 import './App.css'
+import Header from './Header/Header.jsx'
 import Input from './Input/Input.jsx'
 import Output from './Output/Output.jsx'
 import { useState } from 'react';
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="mainContent">
+      <Header/>
       <Input callback={handleWordSubmission}/> {/*using callback prop get word*/}
       <Output verbData={verbData}/> {/*send verb data to output as prop*/}
     </div>

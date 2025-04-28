@@ -1,5 +1,5 @@
 .formBox{
-    border-bottom: 2px solid;
+    border-bottom: 2px solid rgba(82, 70, 60, 0.76);
     display: flex;
     padding: 5px;
     align-items: center;
@@ -30,11 +30,11 @@
     }
     button:hover{
         cursor: pointer;
-        color: #2f362c;
+        color: #4a5744;
     }
 }
 .infoBoxShowing{
-    border-bottom: 2px solid;
+    border-bottom: 2px solid rgba(82, 70, 60, 0.76);
     background-color: white;
     max-height: 150px;
     overflow: hidden;

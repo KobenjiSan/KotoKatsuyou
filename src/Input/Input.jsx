@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Input.module.css"
 
 
 function Input(props){
@@ -12,12 +13,14 @@ function Input(props){
     return(
         <div>
             <label>Verb</label><br/>
-            <input 
-                type="text" 
-                value={input}
-                onChange={handleInputChange}    
-            />
-            <button onClick={() => props.callback(input)}>Conjugate</button>
+            <div className={styles.inputBar}>
+                <input 
+                    type="text" 
+                    value={input}
+                    onChange={handleInputChange}    
+                />
+                <button onClick={() => props.callback(input)}>Conjugate</button>
+            </div>
         </div>
     );
 

@@ -1,9 +1,12 @@
 *{
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgb(43, 38, 33);
 }
 
 .mainContent{
   /* background-color: aqua; */
   width: 600px;
   justify-self: center;
+  transform-origin: top;
+  transform: scale(1.25);
 }
