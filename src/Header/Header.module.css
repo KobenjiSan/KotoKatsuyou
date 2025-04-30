@@ -8,3 +8,21 @@
         padding: 0;
     }
 }
+
+.title{
+
+    h1{
+        color: rgb(94, 61, 49);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .eng{
+        font-size: 3.5rem;
+        margin-top: 5%;
+    }
+    .jap{
+        font-size: 5rem;
+        margin-top: -3%;
+    }
+}

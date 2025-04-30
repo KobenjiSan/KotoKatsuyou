@@ -52,7 +52,11 @@ function PastForm(props){
             <div className={styles.formBox}>
                 <p className={styles.type}>{formName}</p>
                 <p className={styles.word}>{conjugateWord()}</p>
-                <button onClick={handleShowBoxToggle}>˅</button>
+                <button 
+                    onClick={handleShowBoxToggle} 
+                    className={isShowingBox ? styles.buttonDown : styles.buttonUp}>
+                        {'>'}
+                </button>
             </div>
             <div className={isShowingBox ? styles.infoBoxShowing : styles.infoBoxHidden}>
                 <b>{formName}</b> - {definition}

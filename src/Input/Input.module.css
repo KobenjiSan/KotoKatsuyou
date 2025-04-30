@@ -1,26 +1,32 @@
 .inputBar{
     display: flex;
+    margin-top: 12px;
 
     input{
         flex: 1;
-        height: 2rem;
+        height: 3rem;
         font-size: 1.5rem;
         font-weight: bold;
-        padding: 2px 5px;
-        border: 2px solid black;
-        border-radius: 7px;
-        margin-right: 10%;
+        padding: 2px 16px;
+        border: 2px solid rgba(226, 220, 209, 0.76);
+        border-radius: 12px;
+        margin-right: 5%;
+    }
+    input:focus{
+        border: 2px solid rgba(226, 220, 209, 0.76);
+        outline: none;
     }
 
     button{
         flex-direction: column-reverse;
+        padding: 12px;
         width: 30%;
         font-size: 1.5rem;
-        font-weight: bold;
+        /* font-weight: bold; */
         color: white;
         background-color: #B06D66;
         border: none;
-        border-radius: 7px;
+        border-radius: 12px;
     }
     button:hover{
         background-color: #d1867e;
