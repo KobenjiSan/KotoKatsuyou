@@ -2,7 +2,10 @@
     "hiragana": "たべる",
     "kanji": "食べる",
     "meaning": "to eat",
-    "type": "ichidan"
+    "pastMeaning": "ate",
+    "type": "ichidan",
+    "exampleTemplate": "ごはんを",
+    "exampleMeaning": "I [verb] rice"
 },
 {
     "hiragana": "いく",

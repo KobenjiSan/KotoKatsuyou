@@ -27,16 +27,18 @@
         text-justify: center;
         margin-left: 6px;
         margin-top: 2px;
+        color: #5a6854;
     }
     button:hover{
         cursor: pointer;
-        color: #4a5744;
+        color: #384433;
     }
 }
 .infoBoxShowing{
     border-bottom: 2px solid rgba(82, 70, 60, 0.76);
+    padding: 10px 8px;
     background-color: white;
-    max-height: 150px;
+    max-height: 175px;
     overflow: hidden;
     opacity: 1;
     transition: max-height 0.65s ease, opacity 0.5s ease, padding 0.5s ease;
@@ -44,6 +46,8 @@
 }
 .infoBoxHidden{
     background-color: white;
+    padding-left: 8px;
+    padding-right: 8px;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.75s ease, opacity 0.5s ease, padding 0.5s ease;
