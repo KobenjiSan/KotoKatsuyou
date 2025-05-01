@@ -18,7 +18,7 @@
 
     .hiragana{
         flex:1;
-        font-weight:400;
+        font-weight:500;
     }
 
     .meaning{
@@ -28,6 +28,9 @@
 
     .type{
         flex-direction: column-reverse;
+        font-weight: 400;
+        font-size: 1.75rem;
+        color: rgba(94, 61, 49, 0.853);
     }
 
 }

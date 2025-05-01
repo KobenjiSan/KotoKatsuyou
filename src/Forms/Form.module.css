@@ -27,11 +27,11 @@
         text-justify: center;
         margin-left: 6px;
         margin-top: 2px;
-        color: #5a6854;
+        color: rgba(53, 52, 50, 0.76);
     }
     button:hover{
         cursor: pointer;
-        color: #384433;
+        color: rgba(161, 158, 151, 0.76);
     }
 }
 .infoBoxShowing{
@@ -55,10 +55,10 @@
 }
 
 .buttonUp{
-    transition: transform 0.3s ease; /* Smooth animation */
+    transition: transform 0.75s ease; /* Smooth animation */
     display: inline-block; /* Ensures transform applies properly */
 }
 .buttonDown{
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     transform: rotate(90deg); /* Rotates it to point down */
 }

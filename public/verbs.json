@@ -5,29 +5,41 @@
     "pastMeaning": "ate",
     "type": "ichidan",
     "exampleTemplate": "ごはんを",
-    "exampleMeaning": "I [verb] rice"
+    "exampleMeaning": "I [verb] rice."
 },
 {
     "hiragana": "いく",
     "kanji": "行く",
     "meaning": "to go",
-    "type": "godan"
+    "pastMeaning": "went",
+    "type": "godan",
+    "exampleTemplate": "家に",
+    "exampleMeaning": "I [verb] home."
 },
 {
     "hiragana": "する",
     "kanji": "する",
     "meaning": "to do",
-    "type": "irregular"
+    "pastMeaning": "did",
+    "type": "irregular",
+    "exampleTemplate": "宿題を",
+    "exampleMeaning": "I [verb] my homework."
 },
 {
     "hiragana": "くる",
     "kanji": "来る",
     "meaning": "to come",
-    "type": "irregular"
+    "pastMeaning": "came",
+    "type": "irregular",
+    "exampleTemplate": "学校に",
+    "exampleMeaning": "I [verb] to school."
 },
 {
     "hiragana": "あそぶ",
     "kanji": "遊ぶ",
     "meaning": "to play",
-    "type": "godan"
+    "pastMeaning": "played",
+    "type": "godan",
+    "exampleTemplate": "友だちと",
+    "exampleMeaning": "I [verb] with friends."
 }]

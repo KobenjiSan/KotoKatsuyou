@@ -16,8 +16,6 @@ function PastForm(props){
     const formName = "Past";
     const definition = "A conjugation that changes a verb's meaning from doing something to having done it.";
     
-    const meaning = props.data.meaning ? "did " + (props.data.meaning).slice(3) : null; // "did" is a temporary fix
-
     const [isShowingBox, setIsShowingBox] = useState(false);
 
     function handleShowBoxToggle(){
@@ -61,7 +59,7 @@ function PastForm(props){
             <div className={isShowingBox ? styles.infoBoxShowing : styles.infoBoxHidden}>
                 <b>{formName}</b> - {definition}
                 <br/><br/>
-                <b>Meaning:</b> {meaning}
+                <b>Meaning:</b> {props.data.pastMeaning}
                 <br/><br/>
                 <b>Example Sentence:</b> 
             </div>

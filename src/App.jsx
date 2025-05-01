@@ -29,7 +29,10 @@ function App() {
             const tempData = {"hiragana": value.hiragana,
                               "kanji": value.kanji,
                               "meaning": value.meaning,
-                              "type": value.type};
+                              "pastMeaning": value.pastMeaning,
+                              "type": value.type,
+                              "exampleTemplate": value.exampleTemplate,
+                              "exampleMeaning": value.exampleMeaning};
             verbCache.push(tempData);
             setVerbData(tempData);
           }
