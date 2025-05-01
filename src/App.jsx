@@ -7,8 +7,7 @@ import { useState } from 'react';
 function App() {
 
   const [verbData, setVerbData] = useState({});
-
-  let verbCache = [];
+  const [verbCache, setVerbCache] = useState([]);
 
   /**
    * Handles submission of a new verb.
@@ -20,8 +19,10 @@ function App() {
    */
   function handleWordSubmission(input){
     if(verbCache.find(verb => verb.hiragana === input)){
+      // console.log("pulled from cache");
       setVerbData(verbCache.find(verb => verb.hiragana === input)); 
     }else{
+      // console.log("fetching from API");
       fetch("./verbs.json")
         .then(response => response.json())
         .then(values => values.forEach(value => {
@@ -33,7 +34,7 @@ function App() {
                               "type": value.type,
                               "exampleTemplate": value.exampleTemplate,
                               "exampleMeaning": value.exampleMeaning};
-            verbCache.push(tempData);
+            setVerbCache(prev => [...prev, tempData]);
             setVerbData(tempData);
           }
         }))
