@@ -23,26 +23,23 @@ function App() {
       setVerbData(verbCache.find(verb => verb.hiragana === input)); 
     }else{
       // console.log("fetching from API");
-      fetch('/api/test')
+      // fetch('/api/test')
+      //   .then(response => response.json())
+      //   .then(value => console.log(value.message));
+      fetch(`/api/katsuyou/verb/${input}`)
         .then(response => response.json())
-        .then(value => console.log(value.message));
-        /////////////////
-    //   fetch("./verbs.json")
-    //     .then(response => response.json())
-    //     .then(values => values.forEach(value => {
-    //       if(value.hiragana === input){
-    //         const tempData = {"hiragana": value.hiragana,
-    //                           "kanji": value.kanji,
-    //                           "meaning": value.meaning,
-    //                           "pastMeaning": value.pastMeaning,
-    //                           "type": value.type,
-    //                           "exampleTemplate": value.exampleTemplate,
-    //                           "exampleMeaning": value.exampleMeaning};
-    //         setVerbCache(prev => [...prev, tempData]);
-    //         setVerbData(tempData);
-    //       }
-    //     }))
-    //     .catch(error => console.log(error)); // make this say input not found or something
+        .then(value => {
+            const tempData = {"hiragana": value.hiragana,
+                              "kanji": value.kanji,
+                              "meaning": value.meaning,
+                              "pastMeaning": value.pastMeaning,
+                              "type": value.type,
+                              "exampleTemplate": value.exampleTemplate,
+                              "exampleMeaning": value.exampleMeaning};
+            setVerbCache(prev => [...prev, tempData]);
+            setVerbData(tempData);
+        })
+        .catch(error => console.log(error)); // make this say input not found or something
       }
   }
 
