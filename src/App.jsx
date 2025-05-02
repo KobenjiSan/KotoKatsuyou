@@ -23,9 +23,10 @@ function App() {
       setVerbData(verbCache.find(verb => verb.hiragana === input)); 
     }else{
       // console.log("fetching from API");
-      fetch('/api/conjugation/hiragana')
+      fetch('/api/test')
         .then(response => response.json())
-        .then(value => console.log(value));
+        .then(value => console.log(value.message));
+        /////////////////
     //   fetch("./verbs.json")
     //     .then(response => response.json())
     //     .then(values => values.forEach(value => {
@@ -42,7 +43,7 @@ function App() {
     //       }
     //     }))
     //     .catch(error => console.log(error)); // make this say input not found or something
-     }
+      }
   }
 
   return (
