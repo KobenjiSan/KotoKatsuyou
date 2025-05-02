@@ -23,23 +23,26 @@ function App() {
       setVerbData(verbCache.find(verb => verb.hiragana === input)); 
     }else{
       // console.log("fetching from API");
-      fetch("./verbs.json")
+      fetch('/api/conjugation/hiragana')
         .then(response => response.json())
-        .then(values => values.forEach(value => {
-          if(value.hiragana === input){
-            const tempData = {"hiragana": value.hiragana,
-                              "kanji": value.kanji,
-                              "meaning": value.meaning,
-                              "pastMeaning": value.pastMeaning,
-                              "type": value.type,
-                              "exampleTemplate": value.exampleTemplate,
-                              "exampleMeaning": value.exampleMeaning};
-            setVerbCache(prev => [...prev, tempData]);
-            setVerbData(tempData);
-          }
-        }))
-        .catch(error => console.log(error)); // make this say input not found or something
-    }
+        .then(value => console.log(value));
+    //   fetch("./verbs.json")
+    //     .then(response => response.json())
+    //     .then(values => values.forEach(value => {
+    //       if(value.hiragana === input){
+    //         const tempData = {"hiragana": value.hiragana,
+    //                           "kanji": value.kanji,
+    //                           "meaning": value.meaning,
+    //                           "pastMeaning": value.pastMeaning,
+    //                           "type": value.type,
+    //                           "exampleTemplate": value.exampleTemplate,
+    //                           "exampleMeaning": value.exampleMeaning};
+    //         setVerbCache(prev => [...prev, tempData]);
+    //         setVerbData(tempData);
+    //       }
+    //     }))
+    //     .catch(error => console.log(error)); // make this say input not found or something
+     }
   }
 
   return (

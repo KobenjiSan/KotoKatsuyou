@@ -16,7 +16,6 @@ function Output(props){
                 <h2 className={styles.hiragana}>{props.verbData.hiragana}</h2>
                 <h2 className={styles.meaning}>{props.verbData.meaning ? (props.verbData.meaning).toUpperCase() : null}</h2> 
                 <h2 className={styles.type}>{props.verbData.type ? (props.verbData.type).toUpperCase() : null}</h2>
-                
             </div>
             <DictionaryForm data={props.verbData}/>
             <PoliteForm data={props.verbData}/>
