@@ -9,17 +9,23 @@ const conversionMap =  {"う": "あ",
                         "く": "か", 
                         "ぐ": "が", 
                         "す": "さ"}
-                        
+        
+const meaningBase = "to not ";                        
+
 const suffix = "ない";
 
 const kuruType = "こ"
+
+const helperVerb = "do ";
 
 const negativeFormConfig = {
     formName: "Negative",
 
     definition: "A conjugation that changes a verb's meaning from doing something to not doing it.",
 
-    meaningBase: "to not ",
+    meaning: (verbMeaning) => meaningBase + verbMeaning.slice(3),
+
+    sentenceMeaning: (sentence, meaning) => Utils.buildSentence(sentence, meaning, helperVerb),
 
     whatsHappening: (wordData) => {
       switch(wordData.type){

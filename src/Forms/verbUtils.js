@@ -56,3 +56,7 @@ export function whatsHappeningIrregular(wordData, kuruType, formSuffix){
         return `Replace ${lastCharacters} in ${wordData.kanji} with ${kuruType}${formSuffix} → `;
     }
 }
+
+export function buildSentence(sentence, meaning, helperVerb){
+    return (sentence).replace("[verb]", helperVerb + meaning.slice(3));
+}

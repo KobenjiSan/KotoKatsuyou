@@ -52,8 +52,8 @@ function App() {
                                 "meaning": value.meaning,
                                 "pastMeaning": value.pastMeaning,
                                 "type": value.type,
-                                "exampleTemplate": value.exampleTemplate,
-                                "exampleMeaning": value.exampleMeaning};
+                                "jpSentenceHead": value.exampleTemplate,
+                                "engSentence": value.exampleMeaning};
               setVerbCache(prev => [...prev, tempData]);
               setVerbData(tempData);
           })
