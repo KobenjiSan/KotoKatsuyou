@@ -6,14 +6,13 @@ function FormBox(props){
     // Form Specific
     const formName = props.config.formName;
     const definition = props.config.definition;
-    const conversionMap = props.config.conversionMap;
     const meaningBase = props.config.meaningBase;   // base of a new meaning (ex: to... -> to not.../should...)
 
     // Word Specific
-    const conjugatedWord = props.config.conjugate(props.data, conversionMap);
+    const conjugatedWord = props.config.conjugate(props.data);
     const meaning = props.data.meaning ? meaningBase + (props.data.meaning).slice(3) : null; // all should be in infinitive form (ex: to eat)
-    const whatsHappening = props.config.whatsHappening(props.data, conversionMap);
-    const exampleMeaning = props.data.exampleMeaning ? (props.data.exampleMeaning).replace("[verb]", "do " + (meaning).slice(3)) : null;
+    const whatsHappening = props.config.whatsHappening(props.data);
+    const exampleMeaning = props.data.exampleMeaning ? (props.data.exampleMeaning).replace("[verb]", "do " + (meaning).slice(3)) : null; // TODO: needs edit
 
     // Strictly Component use
     const [isShowingBox, setIsShowingBox] = useState(false);

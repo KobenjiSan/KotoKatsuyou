@@ -4,4 +4,4 @@ export {default as PastForm} from './PastForm';
 export {default as PoliteForm} from './PoliteForm';
 export {default as TeForm} from './TeForm';
 export {default as FormBox} from './FormBox';
-export {default as negativeFormConfig} from './negativeFormConfig'
+export {default as negativeFormConfig} from './TypeConfigs/negativeFormConfig'
