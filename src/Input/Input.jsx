@@ -18,7 +18,7 @@ function Input(props){
                     type="text" 
                     value={input}
                     onChange={handleInputChange}
-                    placeholder="Enter verb (hiragana only)" 
+                    placeholder="Enter Japanese verb" 
                 />
                 <button onClick={() => props.callback(input)}>Conjugate</button>
             </div>
