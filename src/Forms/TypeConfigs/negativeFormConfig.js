@@ -13,7 +13,9 @@ export default {
                     "ぐ": "が", 
                     "す": "さ"},
 
-    getMeaning: (baseMeaning) => "to not " + (baseMeaning).slice(3),
+    meaningBase: "to not ",
+
+    suffix: "ない",
 
     whatsHappening: (wordData, conversionMap) => {
       if(wordData.type === "ichidan"){
@@ -33,7 +35,6 @@ export default {
       }},
 
     conjugate: (wordData, conversionMap) => {
-      console.log(conversionMap);
       if(wordData.type === "ichidan"){
           const conjugatedWord = (wordData.kanji).slice(0, -1); 
           return conjugatedWord + "ない"
@@ -52,6 +53,4 @@ export default {
           }
       }
     },
-
-    exampleMeaning:(wordData, meaning) => (wordData.exampleMeaning).replace("[verb]", "do " + (meaning).slice(3))
   }

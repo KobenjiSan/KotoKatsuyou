@@ -3,34 +3,29 @@ import styles from './Form.module.css'
 
 function FormBox(props){
 
-    const conversionMap = props.config.conversionMap;
-
+    // Form Specific
     const formName = props.config.formName;
     const definition = props.config.definition;
-    const meaning = props.data.meaning ? props.config.getMeaning(props.data.meaning) : null;
+    const conversionMap = props.config.conversionMap;
+    const meaningBase = props.config.meaningBase;   // base of a new meaning (ex: to... -> to not.../should...)
+
+    // Word Specific
+    const conjugatedWord = props.config.conjugate(props.data, conversionMap);
+    const meaning = props.data.meaning ? meaningBase + (props.data.meaning).slice(3) : null; // all should be in infinitive form (ex: to eat)
+    const whatsHappening = props.config.whatsHappening(props.data, conversionMap);
+    const exampleMeaning = props.data.exampleMeaning ? (props.data.exampleMeaning).replace("[verb]", "do " + (meaning).slice(3)) : null;
+
+    // Strictly Component use
     const [isShowingBox, setIsShowingBox] = useState(false);
-    const [whatsHappening, setWhatsHappening] = useState("");
-
-    const exampleMeaning = props.data.exampleMeaning && props.data.meaning ? props.config.exampleMeaning(props.data, props.config.getMeaning(props.data.meaning)) : null;
-
     function handleShowBoxToggle(){
         setIsShowingBox(!isShowingBox);
     }
 
-    // Sets 'What's Happening?' only when props.data is changed
-    useEffect(() => {
-        setWhatsHappening(props.config.whatsHappening(props.data, props.config.conversionMap));
-    }, [props.data]);
-
-    function conjugateWord(){
-        return props.config.conjugate(props.data, props.config.conversionMap);
-    }
-    
     return(
         <div>
             <div className={styles.formBox}>
                 <p className={styles.type}>{formName}</p>
-                <p className={styles.word}>{conjugateWord()}</p>
+                <p className={styles.word}>{conjugatedWord}</p>
             <button 
                 onClick={handleShowBoxToggle} 
                 className={isShowingBox ? styles.buttonDown : styles.buttonUp}>
@@ -40,11 +35,11 @@ function FormBox(props){
             <div className={isShowingBox ? styles.infoBoxShowing : styles.infoBoxHidden}>
                 <b>{formName}</b>: {definition}
                 <br/><br/>
-                <b>What's Happening? </b> {whatsHappening} {conjugateWord()}
+                <b>What's Happening? </b> {whatsHappening} {conjugatedWord}
                 <br /><br />
                 <b>Meaning:</b> {meaning}
                 <br/><br/>
-                <b>Example Sentence:</b> {props.data.exampleTemplate}{conjugateWord()} [ {exampleMeaning} ]
+                <b>Example Sentence:</b> {props.data.exampleTemplate}{conjugatedWord} [ {exampleMeaning} ]
             </div>
         </div>
     );
