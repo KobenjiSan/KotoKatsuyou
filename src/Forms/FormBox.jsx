@@ -9,9 +9,9 @@ function FormBox(props){
 
     // Word Specific
     const conjugatedWord = props.config.conjugate(props.data);
-    const meaning = props.data.meaning ? props.config.meaning(props.data.meaning) : null; // all verbs should be in infinitive form (ex: to eat)
-    const whatsHappening = props.config.whatsHappening(props.data);
-    const engSentence = props.data.engSentence ? props.config.sentenceMeaning(props.data.engSentence, meaning) : null;
+    const meaning = props.data.meaning ? props.config.meaning(props.data) : null; // all verbs should be in infinitive form (ex: to eat)
+    const whatsHappening = props.data.kanji ? props.config.whatsHappening(props.data) : null;
+    const engSentence = props.data.engSentence ? `[ ${props.config.sentenceMeaning(props.data.engSentence, meaning)} ]` : null;
 
     // Strictly Component use
     const [isShowingBox, setIsShowingBox] = useState(false);
@@ -37,7 +37,7 @@ function FormBox(props){
                 <br /><br />
                 <b>Meaning:</b> {meaning}
                 <br/><br/>
-                <b>Example Sentence:</b> {props.data.jpSentenceHead}{conjugatedWord} [ {engSentence} ]
+                <b>Example Sentence:</b> {props.data.jpSentenceHead}{conjugatedWord} {engSentence}
             </div>
         </div>
     );

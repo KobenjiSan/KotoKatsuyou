@@ -2,12 +2,12 @@ import * as Utils from '../verbUtils';
        
 const helperVerb = "";
 
-const dictionaryFormConfig = {
-    formName: "Dictionary C",
+const dictionaryConfig = {
+    formName: "Dictionary",
 
     definition: "The plain, unconjugated form of a Japanese verb used in casual speech, writing, and to build other conjugations",
 
-    meaning: (verbMeaning) => verbMeaning,
+    meaning: (verbData) => verbData.meaning,
 
     sentenceMeaning: (sentence, meaning) => Utils.buildSentence(sentence, meaning, helperVerb),
 
@@ -16,4 +16,4 @@ const dictionaryFormConfig = {
     conjugate: (wordData) => wordData.kanji,
 }
 
-export default dictionaryFormConfig
+export default dictionaryConfig
