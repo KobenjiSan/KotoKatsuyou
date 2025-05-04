@@ -4,5 +4,8 @@ export {default as negativeConfig} from './TypeConfigs/negativeConfig';
 export {default as dictionaryConfig} from './TypeConfigs/dictionaryConfig';
 export {default as politeConfig} from './TypeConfigs/politeConfig';
 export {default as negativePoliteConfig} from './TypeConfigs/negativePoliteConfig';
-export {default as pastConfig} from './TypeConfigs/pastConfig'
-export {default as pastPoliteConfig} from './TypeConfigs/pastPoliteConfig'
+export {default as pastConfig} from './TypeConfigs/pastConfig';
+export {default as pastPoliteConfig} from './TypeConfigs/pastPoliteConfig';
+export {default as pastNegativeConfig} from './TypeConfigs/pastNegativeConfig';
+export {default as pastNegativePoliteConfig} from './TypeConfigs/pastNegativePoliteConfig';
+export {default as teConfig} from './TypeConfigs/teConfig';

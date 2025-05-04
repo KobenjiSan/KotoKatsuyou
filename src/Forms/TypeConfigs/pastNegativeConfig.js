@@ -10,18 +10,18 @@ const conversionMap =  {"う": "わ",
                         "ぐ": "が", 
                         "す": "さ"}
         
-const meaningBase = "to not ";                        
+const meaningBase = "did not ";                        
 
-const suffix = "ない";
+const suffix = "なかった";
 
 const kuruType = "こ"
 
-const helperVerb = "do ";
+const helperVerb = "did ";
 
-const negativeConfig = {
-    formName: "Negative",
+const pastNegativeConfig = {
+    formName: "Past Negative",
 
-    definition: "A conjugation that changes a verb's meaning from doing something to not doing it.",
+    definition: "A conjugation that changes a verb's meaning to not having done it in the past.",
 
     meaning: (verbData) => meaningBase + (verbData.meaning).slice(3),
 
@@ -32,4 +32,4 @@ const negativeConfig = {
     conjugate: (wordData) => Utils.conjugateWord(wordData, suffix, conversionMap, kuruType),
 }
 
-export default negativeConfig
+export default pastNegativeConfig
