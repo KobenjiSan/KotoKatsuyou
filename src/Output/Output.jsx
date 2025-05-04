@@ -1,15 +1,11 @@
 import { 
-    DictionaryForm, 
-    PoliteForm, 
-    NegativeForm, 
-    TeForm, 
-    PastForm,
     FormBox,
     negativeConfig,
     dictionaryConfig,
     politeConfig,
     negativePoliteConfig,
     pastConfig,
+    pastPoliteConfig,
 } from '../Forms';
 import styles from './Output.module.css'
 
@@ -28,11 +24,7 @@ function Output(props){
             <FormBox config={negativeConfig} data={props.verbData}/>
             <FormBox config={negativePoliteConfig} data={props.verbData}/>
             <FormBox config={pastConfig} data={props.verbData}/>
-            {/* <DictionaryForm data={props.verbData}/>
-            <PoliteForm data={props.verbData}/>
-            <NegativeForm data={props.verbData}/>
-            <TeForm data={props.verbData}/>
-            <PastForm data={props.verbData}/> */}
+            <FormBox config={pastPoliteConfig} data={props.verbData}/>
             <div className={styles.foot}/>
         </div>
     );
