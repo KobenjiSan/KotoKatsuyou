@@ -9,7 +9,7 @@ function FormBox(props){
 
     // Word Specific
     const conjugatedWord = props.config.conjugate(props.data);
-    const meaning = props.data.meaning ? props.config.meaning(props.data.meaning) : null; // all should be in infinitive form (ex: to eat)
+    const meaning = props.data.meaning ? props.config.meaning(props.data.meaning) : null; // all verbs should be in infinitive form (ex: to eat)
     const whatsHappening = props.config.whatsHappening(props.data);
     const engSentence = props.data.engSentence ? props.config.sentenceMeaning(props.data.engSentence, meaning) : null;
 

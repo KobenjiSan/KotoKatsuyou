@@ -19,7 +19,7 @@ const kuruType = "こ"
 const helperVerb = "do ";
 
 const negativeFormConfig = {
-    formName: "Negative",
+    formName: "Negative C",
 
     definition: "A conjugation that changes a verb's meaning from doing something to not doing it.",
 
