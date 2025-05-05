@@ -10,7 +10,7 @@ const conversionMap =  {"う": "った",
                         "ぐ": "いだ", 
                         "す": "した"};
 
-const edgeCaseMap = {'行く': {conjugated: '行った', whatsHappening: 'Replace く in 行く with った → '}}; //possibly have a tool tip for why this is different
+const edgeCaseMap = {'行く': {conjugated: '行った', whatsHappening: 'Replace く in 行く with った'}}; //possibly have a tool tip for why this is different
 
 function handleEdgeCase(wordData){
     return edgeCaseMap[wordData.kanji] || null;

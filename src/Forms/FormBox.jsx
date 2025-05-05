@@ -33,7 +33,7 @@ function FormBox(props){
             <div className={isShowingBox ? styles.infoBoxShowing : styles.infoBoxHidden}>
                 <b>{formName}</b>: {definition}
                 <br/><br/>
-                <b>What's Happening? </b> {whatsHappening} {conjugatedWord}
+                <b>What's Happening? </b> {whatsHappening} → {conjugatedWord}
                 <br /><br />
                 <b>Meaning:</b> {meaning}
                 <br/><br/>

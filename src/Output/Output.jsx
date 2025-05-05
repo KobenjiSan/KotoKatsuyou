@@ -9,6 +9,7 @@ import {
     pastNegativeConfig,
     pastNegativePoliteConfig,
     teConfig,
+    teIruConfig,
 } from '../Forms';
 import styles from './Output.module.css'
 
@@ -31,6 +32,7 @@ function Output(props){
             <FormBox config={pastNegativeConfig} data={props.verbData}/>
             <FormBox config={pastNegativePoliteConfig} data={props.verbData}/>
             <FormBox config={teConfig} data={props.verbData}/>
+            <FormBox config={teIruConfig} data={props.verbData}/>
             <div className={styles.foot}/>
         </div>
     );

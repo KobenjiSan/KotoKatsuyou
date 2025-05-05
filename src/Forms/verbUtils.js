@@ -19,7 +19,7 @@ export function conjugateIchidan(wordData, formSuffix){
 }
 
 export function whatsHappeningIchidan(wordData, formSuffix){
-    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${formSuffix} → `;
+    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${formSuffix}`;
 }
 
 // NOTE: edge cases should be managed in configs.
@@ -33,12 +33,12 @@ export function conjugateGodanSpec(wordData, conversionMap){
 }
 
 export function whatsHappeningGodan(wordData, conversionMap, formSuffix){
-    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${conversionMap[getLastCharacter(wordData.kanji)]}, then add ${formSuffix} → `;
+    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${conversionMap[getLastCharacter(wordData.kanji)]}, then add ${formSuffix}`;
 }
 
 // certain special forms dont need the form suffix as it is already added in the map 
 export function whatsHappeningGodanSpec(wordData, conversionMap){
-    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${conversionMap[getLastCharacter(wordData.kanji)]} → `;
+    return `Replace ${getLastCharacter(wordData.kanji)} in ${wordData.kanji} with ${conversionMap[getLastCharacter(wordData.kanji)]}`;
 }
 
 export function conjugateIrregular(wordData, kuruType, formSuffix){
@@ -56,9 +56,9 @@ export function conjugateIrregular(wordData, kuruType, formSuffix){
 export function whatsHappeningIrregular(wordData, kuruType, formSuffix){
     const lastCharacters = getLastTwoCharacters(wordData.hiragana);
     if(lastCharacters === "する"){
-        return `Replace ${lastCharacters} in ${wordData.kanji} with し${formSuffix} → `;
+        return `Replace ${lastCharacters} in ${wordData.kanji} with し${formSuffix}`;
     }else if(lastCharacters === "くる"){
-        return `Replace ${lastCharacters} in ${wordData.kanji} with ${kuruType}${formSuffix} → `;
+        return `Replace ${lastCharacters} in ${wordData.kanji} with ${kuruType}${formSuffix}`;
     }
 }
 
