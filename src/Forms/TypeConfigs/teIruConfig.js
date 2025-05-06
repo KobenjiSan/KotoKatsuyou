@@ -1,3 +1,4 @@
+import nlp from 'compromise';
 import * as Utils from '../verbUtils';
 
 const conversionMap =  {"う": "って", 
@@ -23,27 +24,30 @@ function handleEdgeCase(wordData){
 
 const suffix = "て";
 
+const teSuffix = "いる"
+
 const kuruType = "き"
 
-const helperVerb = "";
+const helperVerb = "am ";
 
 const teIruConfig = {
     formName: "Te-Iru",
 
-    definition: 'A conjugated form used to connect verbs, make requests, or describe ongoing actions. It ends in "て" or "で" depending on the verb.',
+    definition: 'A conjugated form used to show that an action is currently happening or that a state caused by an action still continues',
 
-    meaning: (verbData) => `have ${(verbData.pastMeaning)}`, // NOTE: check if last letter is 'e' before adding 'ing'
+    meaning: (verbData) => `${nlp((verbData.meaning).slice(3)).verbs().toGerund().text()}`,
 
-    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb),
+    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning.slice(3), helperVerb),
 
     whatsHappening: (wordData) => {
         const edge = handleEdgeCase(wordData);
-        return edge ? edge.whatsHappening : `${Utils.whatsHappeningSpec(wordData, suffix, conversionMap, kuruType)}いる`;
+        return edge ? edge.whatsHappening : (`${Utils.whatsHappeningSpec(wordData, suffix, conversionMap, kuruType)}${teSuffix}`);
     },
 
     conjugate: (wordData) => { 
         const edge = handleEdgeCase(wordData);
-        return edge ? edge.conjugated : `${Utils.conjugateWordSpec(wordData, suffix, conversionMap, kuruType)}いる`;
+        const statement = edge ? edge.conjugated : Utils.conjugateWordSpec(wordData, suffix, conversionMap, kuruType) + teSuffix;
+        return statement == `${undefined}いる` ? null : statement;
     },
 }
 

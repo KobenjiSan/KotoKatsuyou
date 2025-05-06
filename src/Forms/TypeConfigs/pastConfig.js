@@ -1,3 +1,4 @@
+import nlp from 'compromise';
 import * as Utils from '../verbUtils';
 
 const conversionMap =  {"う": "った", 
@@ -27,7 +28,7 @@ const pastConfig = {
 
     definition: "A conjugation that changes a verb's meaning from doing something to having done it.",
 
-    meaning: (verbData) => verbData.pastMeaning,
+    meaning: (verbData) => nlp((verbData.meaning).slice(3)).verbs().toPastTense().text(),
 
     sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb),
 

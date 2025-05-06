@@ -1,3 +1,4 @@
+import nlp from 'compromise';
 import * as Utils from '../verbUtils';
 
 const conversionMap =  {"う": "い", 
@@ -21,7 +22,7 @@ const pastPoliteConfig = {
 
     definition: "A conjugation that changes a verb's meaning from doing something to having done it.",
 
-    meaning: (verbData) => `${verbData.pastMeaning} (polite)`,
+    meaning: (verbData) => `${nlp((verbData.meaning).slice(3)).verbs().toPastTense().text()} (polite)`,
 
     sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning.slice(0, -9), helperVerb),
 

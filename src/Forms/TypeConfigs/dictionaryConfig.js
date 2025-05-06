@@ -11,7 +11,7 @@ const dictionaryConfig = {
 
     sentenceMeaning: (sentence, meaning) => Utils.buildSentence(sentence, meaning, helperVerb),
 
-    whatsHappening: (wordData) => `No change: ${wordData.kanji} → `,
+    whatsHappening: (wordData) => `No change: ${wordData.kanji}`,
 
     conjugate: (wordData) => wordData.kanji,
 }
