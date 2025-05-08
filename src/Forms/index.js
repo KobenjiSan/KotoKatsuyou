@@ -9,3 +9,6 @@ export {default as pastNegativeConfig} from './TypeConfigs/pastNegativeConfig';
 export {default as pastNegativePoliteConfig} from './TypeConfigs/pastNegativePoliteConfig';
 export {default as teConfig} from './TypeConfigs/teConfig';
 export {default as teIruConfig} from './TypeConfigs/teIruConfig';
+export {default as teIruPoliteConfig} from './TypeConfigs/teIruPoliteConfig';
+export {default as teKudasaiConfig} from './TypeConfigs/teKudasaiConfig';
+export {default as teMoiiConfig} from './TypeConfigs/teMoiiConfig';

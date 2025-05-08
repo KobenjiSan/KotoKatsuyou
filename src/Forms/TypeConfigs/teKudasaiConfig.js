@@ -23,20 +23,20 @@ function handleEdgeCase(wordData){
 
 const suffix = "て";
 
-const teSuffix = "いる"
+const teSuffix = "ください"
 
 const kuruType = "き"
 
-const helperVerb = "am ";
+const helperVerb = "";
 
-const teIruConfig = {
-    formName: "Te-Iru",
+const teKudasaiConfig = {
+    formName: "Te-Kudasai",
 
-    definition: 'A conjugated form used to show that an action is currently happening or that a state caused by an action still continues',
+    definition: '',
 
-    meaning: (verbData) => Utils.getEnglishINGForm(verbData),
+    meaning: (verbData) => `Please ${verbData.meaning.slice(3)}`,
 
-    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb),
+    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb).slice(2),
 
     whatsHappening: (wordData) => {
         const edge = handleEdgeCase(wordData);
@@ -50,4 +50,4 @@ const teIruConfig = {
     },
 }
 
-export default teIruConfig
+export default teKudasaiConfig
