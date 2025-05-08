@@ -50,7 +50,6 @@ function App() {
               const tempData = {"hiragana": value.hiragana,
                                 "kanji": value.kanji,
                                 "meaning": value.meaning,
-                                "pastMeaning": value.pastMeaning,
                                 "type": value.type,
                                 "jpSentenceHead": value.exampleTemplate,
                                 "engSentence": value.exampleMeaning};

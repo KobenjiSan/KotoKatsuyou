@@ -35,9 +35,9 @@ const teIruConfig = {
 
     definition: 'A conjugated form used to show that an action is currently happening or that a state caused by an action still continues',
 
-    meaning: (verbData) => `${nlp((verbData.meaning).slice(3)).verbs().toGerund().text()}`,
+    meaning: (verbData) => Utils.getEnglishINGForm(verbData),
 
-    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning.slice(3), helperVerb),
+    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb),
 
     whatsHappening: (wordData) => {
         const edge = handleEdgeCase(wordData);

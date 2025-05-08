@@ -1,3 +1,5 @@
+import nlp from 'compromise';
+
 function stripLastCharacter(verb){
     return verb.slice(0, -1);
 }
@@ -113,5 +115,40 @@ export function whatsHappeningSpec(wordData, formSuffix, conversionMap, kuruType
             return whatsHappeningGodanSpec(wordData, conversionMap);
         case "irregular":
             return whatsHappeningIrregular(wordData, kuruType, formSuffix);
+    }
+}
+
+export function getPastMeaning(wordData){
+    const pastMeaning = nlp((wordData.meaning).slice(3)).verbs().toPastTense().text();
+    if(pastMeaning === "" || pastMeaning === (wordData.meaning).slice(3)){
+        return "did " + (wordData.meaning).slice(3);
+    }else{
+        return pastMeaning;
+    }
+}
+
+const cvcOverrides = {
+  cut: 'cutting'
+};
+
+export function getEnglishINGForm(wordData){
+    const meaning = (wordData.meaning).slice(3);
+    const ingForm = (nlp(meaning).verbs().toGerund().text()).slice(3);
+    if(ingForm === '' || ingForm === (wordData.meaning).slice(3)){
+        if(meaning.endsWith('ie')){
+            return meaning.stripLastTwoCharacters + 'ying';
+        }else if(meaning.endsWith('ee')){
+            return meaning + 'ing';
+        }else if(meaning.endsWith('e')){
+            return meaning.stripLastCharacter + 'ing';
+        }else if(meaning.endsWith('c')){
+            return meaning + 'king';
+        }else if(cvcOverrides[meaning]){
+            return cvcOverrides[meaning];
+        }else{
+            return meaning + 'ing';
+        }
+    }else{
+        return ingForm;
     }
 }

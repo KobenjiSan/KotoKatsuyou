@@ -33,7 +33,7 @@ const teConfig = {
 
     definition: 'A conjugated form used to connect verbs, make requests, or describe ongoing actions. It ends in "て" or "で" depending on the verb.',
 
-    meaning: (verbData) => `${(verbData.meaning).slice(3)} / ${(nlp((verbData.meaning).slice(3)).verbs().toGerund().text()).slice(3)}`, // NOTE: check if last letter is 'e' before adding 'ing'
+    meaning: (verbData) => `${(verbData.meaning).slice(3)} / ${Utils.getEnglishINGForm(verbData)}`, // NOTE: check if last letter is 'e' before adding 'ing'
 
     sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence.slice(2), meaning, helperVerb),
 
