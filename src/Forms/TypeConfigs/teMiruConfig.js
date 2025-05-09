@@ -10,7 +10,7 @@ const conversionMap =  {"う": "って",
                         "ぐ": "いで", 
                         "す": "して"};
 
-const teSuffix = "ください";
+const teSuffix = "みる";
 
 const edgeCaseMap = { //possibly have a tool tip for why these are different
     '行く': {
@@ -29,12 +29,12 @@ const kuruType = "き";
 
 const helperVerb = "";
 
-const teKudasaiConfig = {
-    formName: "Te-Kudasai",
+const teMiruConfig = {
+    formName: "Te-Miru",
 
     definition: '',
 
-    meaning: (verbData) => `Please ${verbData.meaning.slice(3)}`,
+    meaning: (verbData) => `Try ${Utils.getEnglishINGForm(verbData)}`,
 
     sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb).slice(2),
 
@@ -50,4 +50,4 @@ const teKudasaiConfig = {
     },
 }
 
-export default teKudasaiConfig
+export default teMiruConfig

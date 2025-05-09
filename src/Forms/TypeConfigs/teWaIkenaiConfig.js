@@ -10,7 +10,7 @@ const conversionMap =  {"う": "って",
                         "ぐ": "いで", 
                         "す": "して"};
 
-const teSuffix = "ください";
+const teSuffix = "はいけない";
 
 const edgeCaseMap = { //possibly have a tool tip for why these are different
     '行く': {
@@ -29,14 +29,14 @@ const kuruType = "き";
 
 const helperVerb = "";
 
-const teKudasaiConfig = {
-    formName: "Te-Kudasai",
+const teWaIkenaiConfig = {
+    formName: "Te-Wa-Ikenai",
 
     definition: '',
 
-    meaning: (verbData) => `Please ${verbData.meaning.slice(3)}`,
+    meaning: (verbData) => `must not ${verbData.meaning.slice(3)}`,
 
-    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb).slice(2),
+    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb),
 
     whatsHappening: (wordData) => {
         const edge = handleEdgeCase(wordData);
@@ -50,4 +50,4 @@ const teKudasaiConfig = {
     },
 }
 
-export default teKudasaiConfig
+export default teWaIkenaiConfig

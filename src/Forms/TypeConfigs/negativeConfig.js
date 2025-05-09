@@ -14,7 +14,7 @@ const meaningBase = "to not ";
 
 const suffix = "ない";
 
-const kuruType = "こ"
+const kuruType = "こ";
 
 const helperVerb = "do ";
 

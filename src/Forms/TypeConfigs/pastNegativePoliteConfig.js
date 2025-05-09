@@ -14,7 +14,7 @@ const meaningBase = "did not ";
 
 const suffix = "ませんでした";
 
-const kuruType = "き"
+const kuruType = "き";
 
 const helperVerb = "did ";
 

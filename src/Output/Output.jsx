@@ -13,6 +13,9 @@ import {
     teIruPoliteConfig,
     teKudasaiConfig,
     teMoiiConfig,
+    teWaIkenaiConfig,
+    teKaraConfig,
+    teMiruConfig,
 } from '../Forms';
 import styles from './Output.module.css'
 
@@ -39,6 +42,9 @@ function Output(props){
             <FormBox config={teIruPoliteConfig} data={props.verbData}/>
             <FormBox config={teKudasaiConfig} data={props.verbData}/>
             <FormBox config={teMoiiConfig} data={props.verbData}/>
+            <FormBox config={teWaIkenaiConfig} data={props.verbData}/>
+            <FormBox config={teKaraConfig} data={props.verbData}/>
+            <FormBox config={teMiruConfig} data={props.verbData}/>
             <div className={styles.foot}/>
         </div>
     );

@@ -10,10 +10,12 @@ const conversionMap =  {"う": "って",
                         "ぐ": "いで", 
                         "す": "して"};
 
+const teSuffix = "いる";
+
 const edgeCaseMap = { //possibly have a tool tip for why these are different
     '行く': {
-        conjugated: '行っている', 
-        whatsHappening: 'Replace く in 行く with っている'
+        conjugated: `行って${teSuffix}`, 
+        whatsHappening: `Replace く in 行く with って${teSuffix}`
     }
 }; 
 
@@ -23,9 +25,7 @@ function handleEdgeCase(wordData){
 
 const suffix = "て";
 
-const teSuffix = "いる"
-
-const kuruType = "き"
+const kuruType = "き";
 
 const helperVerb = "am ";
 

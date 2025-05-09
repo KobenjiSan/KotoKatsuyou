@@ -24,7 +24,7 @@ function handleEdgeCase(wordData){
 
 const suffix = "て";
 
-const kuruType = "き"
+const kuruType = "き";
 
 const helperVerb = "";
 

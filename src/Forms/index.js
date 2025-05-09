@@ -12,3 +12,6 @@ export {default as teIruConfig} from './TypeConfigs/teIruConfig';
 export {default as teIruPoliteConfig} from './TypeConfigs/teIruPoliteConfig';
 export {default as teKudasaiConfig} from './TypeConfigs/teKudasaiConfig';
 export {default as teMoiiConfig} from './TypeConfigs/teMoiiConfig';
+export {default as teWaIkenaiConfig} from './TypeConfigs/teWaIkenaiConfig';
+export {default as teKaraConfig} from './TypeConfigs/teKaraConfig';
+export {default as teMiruConfig} from './TypeConfigs/teMiruConfig';

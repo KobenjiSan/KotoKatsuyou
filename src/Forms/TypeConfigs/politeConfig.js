@@ -12,7 +12,7 @@ const conversionMap =  {"う": "い",
 
 const suffix = "ます";
 
-const kuruType = "き"
+const kuruType = "き";
 
 const helperVerb = "";
 
