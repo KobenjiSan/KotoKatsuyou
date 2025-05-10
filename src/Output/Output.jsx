@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { 
     FormBox,
     negativeConfig,
@@ -21,13 +22,27 @@ import styles from './Output.module.css'
 
 function Output(props){
 
+    const [typeSpanText, setTypeSpanText] = useState('');
+
+    useEffect(() => {
+        if(props.verbData.type === "ichidan"){
+            setTypeSpanText('Ichidan verbs drop the final る and add conjugation endings directly.');
+        }else if(props.verbData.type === "godan"){
+            setTypeSpanText('Godan verbs change their final kana depending on the conjugation form.');
+        }else if(props.verbData.type === "irregular"){
+            setTypeSpanText('Irregular verbs don’t follow standard conjugation patterns and are handled uniquely.');
+        }else{
+            setTypeSpanText('');
+        }
+    }, [props.verbData]);
+
     return(
         <div className={styles.output}>
             <div className={styles.head}>
                 <h2 className={styles.kanji}>{props.verbData.kanji}</h2>
                 <h2 className={styles.hiragana}>{props.verbData.hiragana}</h2>
                 <h2 className={styles.meaning}>{props.verbData.meaning ? (props.verbData.meaning).toUpperCase() : null}</h2> 
-                <h2 className={styles.type}>{props.verbData.type ? (props.verbData.type).toUpperCase() : null}</h2>
+                <h2 className={styles.type} title={typeSpanText}>{props.verbData.type ? (props.verbData.type).toUpperCase() : null}</h2>
             </div>
             <FormBox config={dictionaryConfig} data={props.verbData}/>
             <FormBox config={politeConfig} data={props.verbData}/>

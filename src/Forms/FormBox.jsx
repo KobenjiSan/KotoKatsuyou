@@ -35,9 +35,12 @@ function FormBox(props){
                 <br/><br/>
                 <b>What's Happening? </b> {whatsHappening} → {conjugatedWord}
                 <br /><br />
-                <b>Meaning:</b> {meaning}
+                <b>Meaning:</b> <span title='English translations are adjusted automatically using templates. They may not always sound natural.'>{meaning}</span>
                 <br/><br/>
-                <b>Example Sentence:</b> {props.data.jpSentenceHead}{conjugatedWord} {engSentence}
+                <b>Example Sentence:</b> 
+                    <span title='Example sentences are auto-generated from templates and may sound slightly unnatural.'>
+                        {props.data.jpSentenceHead}{conjugatedWord} {engSentence}
+                    </span>
             </div>
         </div>
     );
