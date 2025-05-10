@@ -11,3 +11,18 @@
   transform: scale(1.25);
   padding-bottom: 3%;
 }
+
+.toLink{
+  text-decoration: none;
+  position: absolute;
+  right: 2%;
+  top: .5%;
+  h2{
+    font-weight: lighter;
+    color: #B06D66;
+  }
+  h2:hover{
+      color: #d1867e;
+      cursor: pointer;
+  }
+}
