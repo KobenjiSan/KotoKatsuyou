@@ -38,3 +38,14 @@ label{
     font-size: 1.75rem;
     font-weight: bold;
 }
+
+@media (max-width: 850px){
+    .inputBar{
+        input{
+            max-width: 50%;
+        }
+        button{
+            min-width: 35%;
+        }
+    }
+}

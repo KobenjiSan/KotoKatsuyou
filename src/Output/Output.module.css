@@ -37,3 +37,9 @@
 .foot{
     height: 25px;
 }
+
+@media (max-width: 400px){
+    .hiragana{
+        line-height: 85%;
+    }
+}
