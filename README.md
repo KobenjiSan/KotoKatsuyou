@@ -55,7 +55,7 @@ npm run dev
 ```
 
 App will be available at:
-```http
+```
 http://localhost:5173/
 ```
 
@@ -64,10 +64,10 @@ http://localhost:5173/
 src/
 ├── About/           # About page content
 ├── Error/           # Reusable error display
-├── Forms/           # Conjugation logic, form configs, and render logic
-├── Header/          # App title and navigation
-├── Input/           # User input field and submission logic
-├── Output/          # Conjugated output rendering
+├── Conjugation/     # Conjugation logic, form configs, and render logic
+├── Header/          # App title
+├── Input/           # User input field and submission button
+├── Output/          # Output rendering
 ├── Pages/           # Route-level page components
 ```
 
