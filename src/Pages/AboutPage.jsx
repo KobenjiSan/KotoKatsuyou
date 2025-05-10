@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 import Header from "../Header/Header"
 import About from "../About/About"
 
+/**
+ * Static about page that describes the app’s purpose, features, and tech stack.
+ * Accessible via the /about route.
+ */
 function AboutPage(){
 
     return(

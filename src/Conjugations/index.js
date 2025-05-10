@@ -1,4 +1,4 @@
-export {default as FormBox} from './FormBox';
+export {default as ConjugationBox} from './ConjugationBox';
 export {default as negativeConfig} from './TypeConfigs/negativeConfig';
 export {default as dictionaryConfig} from './TypeConfigs/dictionaryConfig';
 export {default as politeConfig} from './TypeConfigs/politeConfig';

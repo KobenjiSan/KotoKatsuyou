@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { 
-    FormBox,
+    ConjugationBox,
     negativeConfig,
     dictionaryConfig,
     politeConfig,
@@ -17,9 +17,13 @@ import {
     teWaIkenaiConfig,
     teKaraConfig,
     teMiruConfig,
-} from '../Forms';
+} from '../Conjugations';
 import styles from './Output.module.css'
 
+/**
+ * Displays ConjugationBoxes for each Conjugation form
+ * Applies dynamic tooltips based on verb type.
+ */
 function Output(props){
 
     const [typeSpanText, setTypeSpanText] = useState('');
@@ -44,22 +48,22 @@ function Output(props){
                 <h2 className={styles.meaning}>{props.verbData.meaning ? (props.verbData.meaning).toUpperCase() : null}</h2> 
                 <h2 className={styles.type} title={typeSpanText}>{props.verbData.type ? (props.verbData.type).toUpperCase() : null}</h2>
             </div>
-            <FormBox config={dictionaryConfig} data={props.verbData}/>
-            <FormBox config={politeConfig} data={props.verbData}/>
-            <FormBox config={negativeConfig} data={props.verbData}/>
-            <FormBox config={negativePoliteConfig} data={props.verbData}/>
-            <FormBox config={pastConfig} data={props.verbData}/>
-            <FormBox config={pastPoliteConfig} data={props.verbData}/>
-            <FormBox config={pastNegativeConfig} data={props.verbData}/>
-            <FormBox config={pastNegativePoliteConfig} data={props.verbData}/>
-            <FormBox config={teConfig} data={props.verbData}/>
-            <FormBox config={teIruConfig} data={props.verbData}/>
-            <FormBox config={teIruPoliteConfig} data={props.verbData}/>
-            <FormBox config={teKudasaiConfig} data={props.verbData}/>
-            <FormBox config={teMoiiConfig} data={props.verbData}/>
-            <FormBox config={teWaIkenaiConfig} data={props.verbData}/>
-            <FormBox config={teKaraConfig} data={props.verbData}/>
-            <FormBox config={teMiruConfig} data={props.verbData}/>
+            <ConjugationBox config={dictionaryConfig} data={props.verbData}/>
+            <ConjugationBox config={politeConfig} data={props.verbData}/>
+            <ConjugationBox config={negativeConfig} data={props.verbData}/>
+            <ConjugationBox config={negativePoliteConfig} data={props.verbData}/>
+            <ConjugationBox config={pastConfig} data={props.verbData}/>
+            <ConjugationBox config={pastPoliteConfig} data={props.verbData}/>
+            <ConjugationBox config={pastNegativeConfig} data={props.verbData}/>
+            <ConjugationBox config={pastNegativePoliteConfig} data={props.verbData}/>
+            <ConjugationBox config={teConfig} data={props.verbData}/>
+            <ConjugationBox config={teIruConfig} data={props.verbData}/>
+            <ConjugationBox config={teIruPoliteConfig} data={props.verbData}/>
+            <ConjugationBox config={teKudasaiConfig} data={props.verbData}/>
+            <ConjugationBox config={teMoiiConfig} data={props.verbData}/>
+            <ConjugationBox config={teWaIkenaiConfig} data={props.verbData}/>
+            <ConjugationBox config={teKaraConfig} data={props.verbData}/>
+            <ConjugationBox config={teMiruConfig} data={props.verbData}/>
             <div className={styles.foot}/>
         </div>
     );

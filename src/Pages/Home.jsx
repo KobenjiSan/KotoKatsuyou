@@ -5,6 +5,17 @@ import ErrorMessage from '../Error/ErrorMessage.jsx'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Renders the core app structure including input, form logic, and output display.
+ * 
+ * Features:
+ * - Validates user input to ensure only Japanese characters are entered
+ * - Checks a local cache for previously fetched verbs to reduce API calls
+ * - Sends a GET request to the backend API if the verb is not cached
+ * - Gracefully handles API errors and server disconnects
+ * - Constructs a clean verb object from the response and passes it to the output
+ * - Displays error messages using a shared error component
+ */
 function Home(){
 
     const [verbData, setVerbData] = useState({});

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import styles from "./Input.module.css"
 
-
+/**
+ * Takes input from the user
+ * Sends input to home logic on button click
+ */
 function Input(props){
 
     const [input, setInput] = useState("");

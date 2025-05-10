@@ -1,9 +1,20 @@
 import { useState , useEffect } from 'react';
-import styles from './Form.module.css'
+import styles from './Conjugation.module.css'
 
-function FormBox(props){
+/**
+ * Responsible for rendering a single conjugation form output.
+ *
+ * It receives a conjugation config and verb data via props, then:
+ * - Applies the config’s conjugation logic to the verb
+ * - Builds the English meaning and grammar explanation dynamically
+ * - Renders the conjugated form with optional breakdown and example sentence
+ * - Toggles visibility of detailed breakdown via a local state
+ *
+ * This component is reused for each form (e.g., polite, te-form, negative) based on the selected config.
+ */
+function ConjugationBox(props){
 
-    // Form Specific
+    // Conjugation Form Specific
     const formName = props.config.formName;
     const definition = props.config.definition;
 
@@ -45,4 +56,4 @@ function FormBox(props){
         </div>
     );
 }
-export default FormBox
+export default ConjugationBox
