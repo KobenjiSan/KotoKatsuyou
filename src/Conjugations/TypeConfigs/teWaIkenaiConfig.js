@@ -32,7 +32,7 @@ const helperVerb = "";
 const teWaIkenaiConfig = {
     formName: "Te-Wa-Ikenai",
 
-    definition: '',
+    definition: 'A prohibition form using て-form + はいけない to say that something must not be done.',
 
     meaning: (verbData) => `must not ${verbData.meaning.slice(3)}`,
 

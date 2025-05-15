@@ -19,7 +19,7 @@ const helperVerb = "";
 const politeConfig = {
     formName: "Polite",
 
-    definition: "A conjugated form of a Japanese verb used to show respect or formality, typically ending in 〜ます (masu).",
+    definition: "A more formal verb form ending in 〜ます, used in respectful or unfamiliar situations.",
 
     meaning: (verbData) => `${verbData.meaning} (polite)`,
 

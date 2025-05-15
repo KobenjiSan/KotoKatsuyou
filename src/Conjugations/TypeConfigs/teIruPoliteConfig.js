@@ -32,7 +32,7 @@ const helperVerb = "am ";
 const teIruPoliteConfig = {
     formName: "Te-Iru (Polite)",
 
-    definition: 'A conjugated form used to show that an action is currently happening or that a state caused by an action still continues',
+    definition: 'The polite version of ている, using 〜ています or 〜ております for respectful ongoing or resulting states.',
 
     meaning: (verbData) => `${Utils.getEnglishINGForm(verbData)} (polite)`,
 

@@ -31,7 +31,7 @@ const helperVerb = "";
 const teConfig = {
     formName: "Te",
 
-    definition: 'A conjugated form used to connect verbs, make requests, or describe ongoing actions. It ends in "て" or "で" depending on the verb.',
+    definition: 'A versatile verb form ending in 〜て or 〜で, used to connect actions, make requests, or pair with helper verbs.',
 
     meaning: (verbData) => `${(verbData.meaning).slice(3)} / ${Utils.getEnglishINGForm(verbData)}`, // NOTE: check if last letter is 'e' before adding 'ing'
 

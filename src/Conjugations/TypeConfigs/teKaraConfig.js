@@ -32,7 +32,7 @@ const helperVerb = "";
 const teKaraConfig = {
     formName: "Te-Kara",
 
-    definition: '',
+    definition: 'A sequence structure using て-form + から to express “after doing (something).”',
 
     meaning: (verbData) => `After ${Utils.getEnglishINGForm(verbData)}`,
 

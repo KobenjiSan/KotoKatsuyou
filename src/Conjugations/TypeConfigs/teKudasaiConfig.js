@@ -32,7 +32,7 @@ const helperVerb = "";
 const teKudasaiConfig = {
     formName: "Te-Kudasai",
 
-    definition: '',
+    definition: 'A polite command form made with て-form + ください to request someone to do something.',
 
     meaning: (verbData) => `Please ${verbData.meaning.slice(3)}`,
 

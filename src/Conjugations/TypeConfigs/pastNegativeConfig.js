@@ -21,7 +21,7 @@ const helperVerb = "did ";
 const pastNegativeConfig = {
     formName: "Past Negative",
 
-    definition: "A conjugation that changes a verb's meaning to not having done it in the past.",
+    definition: "The casual past negative form ending in 〜なかった, used to say something was not done.",
 
     meaning: (verbData) => meaningBase + (verbData.meaning).slice(3),
 

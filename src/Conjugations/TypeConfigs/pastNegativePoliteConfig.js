@@ -21,7 +21,7 @@ const helperVerb = "did ";
 const pastNegativePoliteConfig = {
     formName: "Past Negative (Polite)",
 
-    definition: "A conjugation that changes a verb's meaning to not having done it in the past.",
+    definition: "The polite past negative verb form ending in 〜ませんでした, expressing respectfully that something wasn't done.",
 
     meaning: (verbData) => `${meaningBase}${(verbData.meaning).slice(3)} (polite)`,
 

@@ -32,7 +32,7 @@ const helperVerb = "am ";
 const teIruConfig = {
     formName: "Te-Iru",
 
-    definition: 'A conjugated form used to show that an action is currently happening or that a state caused by an action still continues',
+    definition: 'A structure using the て-form plus いる to express ongoing actions or resulting states (e.g., “is doing” or “has done”).',
 
     meaning: (verbData) => Utils.getEnglishINGForm(verbData),
 

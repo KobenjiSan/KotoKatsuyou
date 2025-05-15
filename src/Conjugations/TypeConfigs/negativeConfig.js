@@ -21,7 +21,7 @@ const helperVerb = "do ";
 const negativeConfig = {
     formName: "Negative",
 
-    definition: "A conjugation that changes a verb's meaning from doing something to not doing it.",
+    definition: "The casual negative form of a verb, typically ending in 〜ない to express that something is not done.",
 
     meaning: (verbData) => meaningBase + (verbData.meaning).slice(3),
 

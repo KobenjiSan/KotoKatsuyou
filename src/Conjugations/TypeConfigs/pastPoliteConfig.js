@@ -19,7 +19,7 @@ const helperVerb = "";
 const pastPoliteConfig = {
     formName: "Past (Polite)",
 
-    definition: "A conjugation that changes a verb's meaning from doing something to having done it.",
+    definition: "The polite past tense verb form ending in 〜ました, used in respectful conversation.",
 
     meaning: (verbData) => `${Utils.getPastMeaning(verbData)} (polite)`,
 

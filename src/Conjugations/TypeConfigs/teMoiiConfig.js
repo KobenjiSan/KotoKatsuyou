@@ -32,11 +32,11 @@ const helperVerb = "";
 const teMoiiConfig = {
     formName: "Te-Mo-ii",
 
-    definition: '',
+    definition: 'A form using て-form + もいい to ask for or give permission, meaning "is it okay to do" or "you may do" something.',
 
     meaning: (verbData) => `Can I ${verbData.meaning.slice(3)}`,
 
-    sentenceMeaning: (sentence, meaning) => Utils.buildPastSentence(sentence, meaning, helperVerb).slice(2),
+    sentenceMeaning: (sentence, meaning) => (Utils.buildPastSentence(sentence, meaning, helperVerb).slice(2)).slice(0,-1) + '?',
 
     whatsHappening: (wordData) => {
         const edge = handleEdgeCase(wordData);

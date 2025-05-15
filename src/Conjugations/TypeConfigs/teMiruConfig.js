@@ -32,7 +32,7 @@ const helperVerb = "";
 const teMiruConfig = {
     formName: "Te-Miru",
 
-    definition: '',
+    definition: 'A form using て-form + みる to express “trying to do (something)” experimentally or for the first time.',
 
     meaning: (verbData) => `Try ${Utils.getEnglishINGForm(verbData)}`,
 

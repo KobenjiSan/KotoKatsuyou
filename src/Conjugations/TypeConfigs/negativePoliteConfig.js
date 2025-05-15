@@ -21,7 +21,7 @@ const helperVerb = "do ";
 const negativePoliteConfig = {
     formName: "Negative (Polite)",
 
-    definition: "A conjugation that changes a verb's meaning from doing something to not doing it.",
+    definition: "The polite negative verb form ending in 〜ません, used to respectfully say something is not done.",
 
     meaning: (verbData) => `${meaningBase}${(verbData.meaning).slice(3)} (polite)`,
 

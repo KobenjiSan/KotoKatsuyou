@@ -25,7 +25,7 @@ const helperVerb = "";
 const pastConfig = {
     formName: "Past",
 
-    definition: "A conjugation that changes a verb's meaning from doing something to having done it.",
+    definition: "The informal past tense of a verb, often ending in 〜た or 〜だ depending on the verb group.",
 
     meaning: (verbData) => Utils.getPastMeaning(verbData),
 

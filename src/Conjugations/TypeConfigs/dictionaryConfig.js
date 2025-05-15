@@ -5,7 +5,7 @@ const helperVerb = "";
 const dictionaryConfig = {
     formName: "Dictionary",
 
-    definition: "The plain, unconjugated form of a Japanese verb used in casual speech, writing, and to build other conjugations",
+    definition: "The base form of a verb used in dictionaries, casual speech, and with certain grammar patterns.",
 
     meaning: (verbData) => verbData.meaning,
 
